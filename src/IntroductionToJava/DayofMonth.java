@@ -37,5 +37,6 @@ public class DayofMonth {
             System.out.printf("The month %d has %s days!", month, daysInMonth);
         else
             System.out.print("Invalid input!");
+            scanner.close();
     }
 }

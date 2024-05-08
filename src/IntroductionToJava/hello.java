@@ -11,5 +11,6 @@ public class hello {
         System.out.println("Enter your name: ");
         String name = s.nextLine();
         System.out.println("Xin chao " + name);
+        s.close();
     }
 }

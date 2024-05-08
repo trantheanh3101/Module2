@@ -28,5 +28,6 @@ public class first_degree_equation {
                 System.out.print("No solution!");
             }
         }
+        sc.close();
     }
 }

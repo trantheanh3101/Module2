@@ -23,5 +23,6 @@ public class bmi_calculator {
         } else {
             System.out.println("Obese");
         }
+        sc.close();
     }
 }
