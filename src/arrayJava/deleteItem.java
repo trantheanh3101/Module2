@@ -1,5 +1,6 @@
 package arrayJava;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class deleteItem {
@@ -36,6 +37,7 @@ public class deleteItem {
             for (int i = index_del; i < N - 1; i++) {
                 array[i] = array[i + 1];
             }
+            System.out.println(Arrays.toString(array));
 
             // Bước 5: In ra mảng sau khi xoá phần tử
             System.out.println("Mảng sau khi xoá phần tử:");

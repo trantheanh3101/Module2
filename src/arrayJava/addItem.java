@@ -3,7 +3,7 @@ package arrayJava;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class test {
+public class addItem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 //
@@ -37,40 +37,15 @@ public class test {
             for (int i = N-1; i > index; i--) {
                 array[i] = array[i - 1];
             }
-//            // Chèn X vào vị trí index
-//            array[index] = X;
-
-            // Tăng kích thước mảng lên 1
-            N++;
+            // Chèn X vào vị trí index
+            array[index] = X;
 
             // Bước 6: In ra mảng
             System.out.println("Mảng sau khi chèn:");
             System.out.println(Arrays.toString(array));
         }
-
         scanner.close();
 
-//        int[] arr = new int[10];
-//        System.out.println(Arrays.toString(arr));
-//
-//        for (int i = 0; i < 10; i++) {
-//          arr[i] = scanner.nextInt();
-//        }
-//        System.out.println(Arrays.toString(arr));
-//
-//        int X = scanner.nextInt();
-//        int index = scanner.nextInt();
-//
-//        for (int i = index; i < 9; i++) {
-//            arr[i] = arr[i + 1];
-//        }
-//        System.out.println(Arrays.toString(arr));
-//
-//        for (int i = 10 - 1; i > index; i--) {
-//                arr[i] = arr[i - 1];
-//            }
-//        arr[index] = X;
-//        System.out.println(Arrays.toString(arr));
     }
 }
 
