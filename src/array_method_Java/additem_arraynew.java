@@ -1,9 +1,9 @@
-package arrayJava;
+package array_method_Java;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class tesst {
+public class additem_arraynew {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
