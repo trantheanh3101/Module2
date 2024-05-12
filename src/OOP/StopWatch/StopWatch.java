@@ -37,7 +37,7 @@ public class StopWatch {
         startTime = Instant.now().toEpochMilli();
     }
 
-    public void end(){
+    public void stop(){
         endTime = Instant.now().toEpochMilli();
     }
 
