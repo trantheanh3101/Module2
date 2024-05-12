@@ -10,7 +10,7 @@ public class testQuadraticEquation {
         double a = sc.nextDouble();
         System.out.print("fill b: ");
         double b = sc.nextDouble();
-        System.out.print("fill b: ");
+        System.out.print("fill c: ");
         double c = sc.nextDouble();
 
         QuadraticEquation quadraticEquation = new QuadraticEquation(a,b,c);
@@ -26,6 +26,7 @@ public class testQuadraticEquation {
             } else {
                 System.out.print("The equation: x = " + -c/b);
             }
+            return;
         }
         if (delta > 0) {
             System.out.println("The equation has 2 roots");
