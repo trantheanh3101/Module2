@@ -18,5 +18,13 @@ public class TestMainPoint {
         System.out.println(point3D);
         Point3D point3D1 = new Point3D(6.5f,7.9f,6.5f);
         System.out.println(point3D1);
+
+
+        MovablePoint movablePoint = new MovablePoint(0,0,1,2);
+        System.out.println("before move: ");
+        System.out.println(movablePoint);
+        System.out.println("after move 3 time: ");
+        movablePoint.move().move().move();
+        System.out.println(movablePoint);
     }
 }
