@@ -6,10 +6,9 @@ import mvc.services.impl.StudentService;
 import mvc.views.StudentView;
 
 public class MainController {
-
     public static void main(String[] args) {
         StudentView studentView = new StudentView();
-        IStudentService studentService = (IStudentService) new StudentService();
+        IStudentService studentService = new StudentService();
         int choice;
         Student student;
         boolean result;

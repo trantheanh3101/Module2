@@ -15,4 +15,20 @@ public class StudentRepository {
         students[count] = student;
         count++;
     }
+
+    public int getCountStu() {
+        return count;
+    }
+
+    public int getCapacity() {
+        return students.length;
+    }
+    // Cung cấp truy cập mang tuong tu mang using , van bao toan private
+    public Student[] getStudents() {
+        Student[] studentNew = new Student[students.length];
+        for (int i = 0; i < students.length; i++) {
+            studentNew[i] = students[i];
+        }
+        return studentNew;
+    }
 }
