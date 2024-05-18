@@ -1,10 +1,12 @@
 package mvc.views;
 
 import mvc.models.Student;
+import mvc.repositories.StudentRepository;
 
 import java.util.Scanner;
 
-public class StudentView {
+public class StudentView implements Iview {
+    private StudentRepository studentRepository = new StudentRepository();
 
     public int view() {
         System.out.println("--------Student View--------");
@@ -17,7 +19,6 @@ public class StudentView {
         Scanner scanner = new Scanner(System.in);
         int choice = Integer.parseInt(scanner.nextLine());
         return choice;
-
     }
 
     public Student viewAdd() {
@@ -32,6 +33,15 @@ public class StudentView {
         String classroom = scanner.nextLine();
         Student student = new Student(code, name, address, classroom);
         return student;
+    }
+
+    public void dispalyAllStudents(Student[] students) {
+        System.out.println("List of all students:");
+        for (Student student : students) {
+            if (student != null) {
+                System.out.println("ID: " + student.getCode() + ", Name: " + student.getName() + ", Address: " + student.getAddress() + ", Class: " + student.getClassroom());
+            }
+        }
     }
 
     public void viewMessage(boolean result) {

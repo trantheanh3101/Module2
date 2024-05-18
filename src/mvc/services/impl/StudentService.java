@@ -14,23 +14,30 @@ public class StudentService implements IStudentService {
             return false;
         }
 
+        if(student.getCode() <0 || student.getCode()>1000000) {
+            return false;
+        }
+
         if (studentRepository.getCountStu() >= studentRepository.getCapacity()) {
             System.out.println("Mảng đã đầy, không thể thêm sinh viên mới.");
             return false;
         }
 
         for (int i = 0; i < studentRepository.getCountStu(); i++) {
-            Student existingStudent = getStudentByIndex(i);
-            if (existingStudent != null && existingStudent.getCode() == student.getCode()) {
+            Student checkStudent = getStudentByIndex(i);
+            if (checkStudent != null && checkStudent.getCode() == student.getCode()) {
                 System.out.println("Học sinh đã tồn tại trong mảng.");
                 return false;
             }
         }
-        if(student.getCode() <0 || student.getCode()>1000000) {
-            return false;
-        }
+
         studentRepository.add(student);
         return true;
+    }
+
+    @Override
+    public Student[] getAllStudents() {
+        return studentRepository.getStudents();
     }
 
     public Student getStudentByIndex(int index) {
