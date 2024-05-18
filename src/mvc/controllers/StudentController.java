@@ -2,9 +2,7 @@ package mvc.controllers;
 
 import mvc.models.Student;
 import mvc.services.IStudentService;
-import mvc.services.impl.StudentService;
 import mvc.views.StudentView;
-import mvc.views.UserView;
 
 public class StudentController {
     private StudentView studentView;
@@ -18,24 +16,30 @@ public class StudentController {
     public void run() {
         int choice;
         Student student;
-        boolean result;
+        boolean resultAdd;
+        Student[] students;
+        int idStudent = 0;
+        boolean resultDelete;
         while (true) {
             choice = studentView.view();
             switch (choice) {
                 case 1: {
                     student = studentView.viewAdd();
-                    result = studentService.add(student);
-                    studentView.viewMessage(result);
+                    resultAdd = studentService.add(student);
+                    studentView.viewMessageAdd(resultAdd);
                     break;
                 }
                 case 2: {
                     break;
                 }
                 case 3: {
+                    idStudent = studentView.deleteStudent();
+                    resultDelete = studentService.delete(idStudent);
+                    studentView.viewMessageDelete(resultDelete);
                     break;
                 }
                 case 4: {
-                    Student[] students = studentService.getAllStudents();
+                    students = studentService.getAllStudents();
                     studentView.dispalyAllStudents(students);
                     break;
                 }

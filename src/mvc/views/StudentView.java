@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class StudentView implements Iview {
     private StudentRepository studentRepository = new StudentRepository();
-
+    Scanner scanner = new Scanner(System.in);
     public int view() {
         System.out.println("--------Student View--------");
         System.out.println("1. Add student");
@@ -22,7 +22,7 @@ public class StudentView implements Iview {
     }
 
     public Student viewAdd() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.print("Input code: ");
         int code = Integer.parseInt(scanner.nextLine());
         System.out.print("Input name: ");
@@ -44,11 +44,26 @@ public class StudentView implements Iview {
         }
     }
 
-    public void viewMessage(boolean result) {
+    public int deleteStudent() {
+        System.out.print("Student want to delete have ID: ");
+        int idDelete = Integer.parseInt(scanner.nextLine());
+        return idDelete;
+    }
+
+    public void viewMessageAdd(boolean result) {
         if(result) {
             System.out.println("Thêm mới thành công");
         } else {
             System.out.println("Thêm mới thất bại");
+        }
+    }
+
+
+    public void viewMessageDelete(boolean result) {
+        if (result){
+            System.out.println(" delete thành công");
+        } else {
+            System.out.println("Không tìm thấy phần tử cần xóa: ");
         }
     }
 }

@@ -4,6 +4,7 @@ import mvc.models.Student;
 import mvc.repositories.StudentRepository;
 import mvc.services.IStudentService;
 
+
 public class StudentService implements IStudentService {
     private StudentRepository studentRepository = new StudentRepository();
 
@@ -19,14 +20,14 @@ public class StudentService implements IStudentService {
         }
 
         if (studentRepository.getCountStu() >= studentRepository.getCapacity()) {
-            System.out.println("Mảng đã đầy, không thể thêm sinh viên mới.");
+//            System.out.println("Mảng đã đầy, không thể thêm sinh viên mới.");
             return false;
         }
 
         for (int i = 0; i < studentRepository.getCountStu(); i++) {
             Student checkStudent = getStudentByIndex(i);
             if (checkStudent != null && checkStudent.getCode() == student.getCode()) {
-                System.out.println("Học sinh đã tồn tại trong mảng.");
+//                System.out.println("Học sinh đã tồn tại trong mảng.");
                 return false;
             }
         }
@@ -38,6 +39,23 @@ public class StudentService implements IStudentService {
     @Override
     public Student[] getAllStudents() {
         return studentRepository.getStudents();
+    }
+
+    @Override
+    public boolean delete(int studentId) {
+        int index = -1;
+        Student deleteStudent = null;
+        for (int i = 0; i < studentRepository.getCountStu(); i++) {
+            if (studentRepository.getStudents()[i].getCode() == studentId){
+                index = i;
+            }
+        }
+        if (index == -1) {
+            return false;
+        }
+
+        studentRepository.deleteStudent(studentId);
+        return true;
     }
 
     public Student getStudentByIndex(int index) {

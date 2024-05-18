@@ -20,8 +20,6 @@ public class StudentRepository {
         return count;
     }
 
-
-
     public int getCapacity() {
         return students.length;
     }
@@ -32,5 +30,17 @@ public class StudentRepository {
             studentNew[i] = students[i];
         }
         return studentNew;
+    }
+
+    public void deleteStudent(int studentId) {
+        for (int i = 0; i < count; i++) {
+            if (students[i].getCode() == studentId){
+                for (int j = i; j < count - 1; j++) {
+                    students[j] = students[j + 1];
+                }
+                students[count - 1] = null; // Loại bỏ phần tử thừa
+                count--;
+            }
+        }
     }
 }
