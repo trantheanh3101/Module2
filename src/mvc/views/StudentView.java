@@ -35,6 +35,12 @@ public class StudentView implements Iview {
         return student;
     }
 
+    public int deleteStudent() {
+        System.out.print("Student want to delete have ID: ");
+        int idDelete = Integer.parseInt(scanner.nextLine());
+        return idDelete;
+    }
+
     public void dispalyAllStudents(Student[] students) {
         System.out.println("List of all students:");
         for (Student student : students) {
@@ -42,12 +48,6 @@ public class StudentView implements Iview {
                 System.out.println("ID: " + student.getCode() + ", Name: " + student.getName() + ", Address: " + student.getAddress() + ", Class: " + student.getClassroom());
             }
         }
-    }
-
-    public int deleteStudent() {
-        System.out.print("Student want to delete have ID: ");
-        int idDelete = Integer.parseInt(scanner.nextLine());
-        return idDelete;
     }
 
     public void viewMessageAdd(boolean result) {
