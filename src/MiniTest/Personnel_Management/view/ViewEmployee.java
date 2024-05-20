@@ -97,4 +97,7 @@ public class ViewEmployee {
     }
 
 
+    public void viewSalyryEmployee(String code) {
+        System.out.println("Salary of employee have code " + code + " = ");
+    }
 }

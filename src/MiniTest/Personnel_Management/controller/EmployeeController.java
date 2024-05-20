@@ -36,6 +36,10 @@ public class EmployeeController {
                     viewEmployee.displayAllEmployees(employees);
                     break;
                 case 4:
+                    employee = viewEmployee.viewSalyryEmployee();
+                    employeeServices.calSalaryEmployee(employee);
+                    break;
+                case 5:
                     break;
                 case 0:
                     return;
