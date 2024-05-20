@@ -1,6 +1,5 @@
 package mvc.controllers;
 
-import mvc.models.Student;
 import mvc.services.IStudentService;
 import mvc.services.impl.StudentService;
 import mvc.views.StudentView;

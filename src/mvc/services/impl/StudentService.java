@@ -44,7 +44,6 @@ public class StudentService implements IStudentService {
     @Override
     public boolean delete(int studentId) {
         int index = -1;
-        Student deleteStudent = null;
         for (int i = 0; i < studentRepository.getCountStu(); i++) {
             if (studentRepository.getStudents()[i].getCode() == studentId){
                 index = i;
