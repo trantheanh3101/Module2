@@ -1,4 +1,4 @@
-package MiniTest;
+package MiniTest.PayBook;
 
 public class MainTest_C2 {
     public static void main(String[] args) {

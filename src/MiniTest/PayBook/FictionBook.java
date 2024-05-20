@@ -1,4 +1,4 @@
-package MiniTest;
+package MiniTest.PayBook;
 
 public class FictionBook extends Book{
     private String category;

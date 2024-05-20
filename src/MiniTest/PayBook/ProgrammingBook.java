@@ -1,4 +1,4 @@
-package MiniTest;
+package MiniTest.PayBook;
 
 public class ProgrammingBook extends Book{
     private String language;

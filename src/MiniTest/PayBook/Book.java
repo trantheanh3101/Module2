@@ -1,4 +1,4 @@
-package MiniTest;
+package MiniTest.PayBook;
 
 public abstract class Book {
     private int bookCode;
