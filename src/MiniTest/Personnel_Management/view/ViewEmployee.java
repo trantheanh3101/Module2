@@ -5,6 +5,7 @@ import MiniTest.Personnel_Management.model.FullTimeEmployee;
 import MiniTest.Personnel_Management.model.PartTimeEmployee;
 import MiniTest.Personnel_Management.reprositories.InforEmployee;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ViewEmployee {
@@ -18,6 +19,8 @@ public class ViewEmployee {
         System.out.println("3. Display all Employee");
         System.out.println("4. Salary Employee ");
         System.out.println("5. Average Salary all Employee");
+        System.out.println("6. List Employee have salary < averageSalary");
+        System.out.println("7. Total Money Employee Part Time");
         System.out.println("0. End program");
         System.out.print("Input your choice: ");
         Scanner scanner = new Scanner(System.in);
@@ -108,5 +111,16 @@ public class ViewEmployee {
 
     public void getAverageSalaryEmployee(double averageSalary) {
         System.out.println("Average Salary all Employee : " + averageSalary);
+    }
+
+    public void listEmployeeAlittleSalaries(Employee[] listEmployeeAlittleSalaries) {
+        for (Employee employee : listEmployeeAlittleSalaries){
+            System.out.println(employee.toString());
+        }
+//        System.out.println(Arrays.toString(listEmployeeAlittleSalaries));
+    }
+
+    public void getTotalMoneyPartTimeEmployee(double totalMoney) {
+        System.out.println("total Money = " + totalMoney);
     }
 }

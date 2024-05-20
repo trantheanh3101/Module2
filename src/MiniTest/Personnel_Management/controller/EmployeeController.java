@@ -47,6 +47,16 @@ public class EmployeeController {
                     double averageSalary =  employeeServices.getAverageSalaryAllEmployee(employees);
                     viewEmployee.getAverageSalaryEmployee(averageSalary);
                     break;
+                case 6:
+                    employees = employeeServices.getAllEmployees();
+                    Employee[] listEmployeeAlittleSalaries = employeeServices.getEmployeeAlittleSalary(employees);
+                    viewEmployee.listEmployeeAlittleSalaries(listEmployeeAlittleSalaries);
+                    break;
+                case 7:
+                    employees = employeeServices.getAllEmployees();
+                    double totalMoney = employeeServices.getTotalSalaryPartTimeEmployee(employees);
+                    viewEmployee.getTotalMoneyPartTimeEmployee(totalMoney);
+                    break;
                 case 0:
                     return;
             }

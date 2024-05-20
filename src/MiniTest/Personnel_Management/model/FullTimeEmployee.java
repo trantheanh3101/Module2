@@ -49,8 +49,7 @@ public class FullTimeEmployee extends Employee implements ReviewSalary {
 
     @Override
     public String toString() {
-        return "FullTimeEmployee{" +
-                super.toString() +
+        return   super.toString() +
                 "basicSalary=" + basicSalary +
                 ", bonusSalary=" + bonusSalary +
                 ", penaltySalary=" + penaltySalary +

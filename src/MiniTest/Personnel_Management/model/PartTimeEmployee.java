@@ -27,10 +27,7 @@ public class PartTimeEmployee extends Employee implements ReviewSalary {
 
     @Override
     public String toString() {
-        return "PartTimeEmployee{" +
-                super.toString() +
-                "overtimeHours=" + overtimeHours +
-                '}';
+        return super.toString() + "overtimeHours=" + overtimeHours + '}';
     }
 
     @Override

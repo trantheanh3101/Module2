@@ -47,4 +47,41 @@ public class EmployeeServices {
         }
         return sumSalary/count;
     }
+
+
+    public Employee[] getEmployeeAlittleSalary(Employee[] employees) {
+        int countEmSalary = 0;
+        int count = employees.length;
+        double averageSalaryAllEmployee = getAverageSalaryAllEmployee(employees);
+
+        Employee[] employeesSalary = new Employee[count];
+
+        for (int i = 0; i < count; i++) {
+            if (employees[i] instanceof PartTimeEmployee) {
+                if (((PartTimeEmployee) employees[i]).getSalaryEmployee() < averageSalaryAllEmployee) {
+                    employeesSalary[countEmSalary] = employees[i];
+                    countEmSalary++;
+                }
+            } else if (employees[i] instanceof FullTimeEmployee) {
+                if (((FullTimeEmployee) employees[i]).getSalaryEmployee() < averageSalaryAllEmployee) {
+                    employeesSalary[countEmSalary] = employees[i];
+                    countEmSalary++;
+                }
+            }
+        }
+
+        Employee[] result = new Employee[countEmSalary];
+        System.arraycopy(employeesSalary, 0, result, 0, countEmSalary);
+
+        return result;
+    }
+
+    public double getTotalSalaryPartTimeEmployee(Employee[] employees) {
+        double total = 0;
+        for (Employee employee : employees){
+            if (employee instanceof PartTimeEmployee)
+                total += ((PartTimeEmployee) employee).getSalaryEmployee();
+        }
+        return total;
+    }
 }

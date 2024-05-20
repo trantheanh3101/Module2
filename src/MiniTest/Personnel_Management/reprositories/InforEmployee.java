@@ -10,8 +10,10 @@ public class InforEmployee {
 
     static {
         employees[0] = new FullTimeEmployee("theanh","FT1",20,"0857157116","trantheanhk11@gmail.com",1000,100,50);
-        employees[1] = new PartTimeEmployee("theanh1","PT1",25,"08571544545","theanhk11@gmail.com",50);
-        count = 2;
+        employees[1] = new FullTimeEmployee("theanh","FT2",20,"085715711","trgantheanhk11@gmail.com",2000,200,20);
+        employees[2] = new PartTimeEmployee("theanh1","PT1",25,"08571544545","theanhk11@gmail.com",50);
+        employees[3] = new PartTimeEmployee("the","PT2",26,"08544545","theanhk1gfd1@gmail.com",5);
+        count = 4;
     }
 
     public static void add(Employee employee){
