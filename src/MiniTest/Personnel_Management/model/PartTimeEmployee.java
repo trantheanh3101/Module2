@@ -34,7 +34,7 @@ public class PartTimeEmployee extends Employee implements ReviewSalary {
     }
 
     @Override
-    public double getSalaryEmployee(Employee employee) {
+    public double getSalaryEmployee() {
         return getOvertimeHours() * 100;
     }
 }

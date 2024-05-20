@@ -23,16 +23,28 @@ public class EmployeeServices {
 
     public double getSalaryEmployee(String code) {
         double result = 0;
-        String codeEmployee ;
         Employee employee;
         for (int i = 0; i < inforEmployee.getCountStu(); i++) {
             employee = inforEmployee.getEmployees()[i];
             if (employee.getCode().equals(code))
                 if (employee instanceof PartTimeEmployee)
-                    result = ((PartTimeEmployee) employee).getSalaryEmployee(employee);
+                    result = ((PartTimeEmployee) employee).getSalaryEmployee();
                 else
-                    result = ((FullTimeEmployee) employee).getSalaryEmployee(employee);
+                    result = ((FullTimeEmployee) employee).getSalaryEmployee();
         }
         return result;
+    }
+
+    public double getAverageSalaryAllEmployee(Employee[] employees) {
+        double sumSalary = 0;
+        int count = inforEmployee.getCountStu();
+        for (int i = 0 ; i < count - 1;i++){
+            if (employees[i] instanceof PartTimeEmployee)
+                sumSalary += ((PartTimeEmployee) employees[i]).getSalaryEmployee();
+            else
+                sumSalary += ((FullTimeEmployee) employees[i]).getSalaryEmployee();
+
+        }
+        return sumSalary/count;
     }
 }

@@ -17,8 +17,8 @@ public class EmployeeController {
         int option;
         boolean result;
         String code ;
-        double salaryEmploye;
-        Employee employee;
+        double salaryEmployee;
+        Employee employee ;
         Employee[] employees;
         while (true){
             option = viewEmployee.view();
@@ -39,9 +39,13 @@ public class EmployeeController {
                     break;
                 case 4:
                     code = viewEmployee.getCodeEmployee();
-                    viewEmployee.getSalaryEmployee(employeeServices.getSalaryEmployee(code));
+                    salaryEmployee = employeeServices.getSalaryEmployee(code);
+                    viewEmployee.getSalaryEmployee(salaryEmployee);
                     break;
                 case 5:
+                    employees = employeeServices.getAllEmployees();
+                    double averageSalary =  employeeServices.getAverageSalaryAllEmployee(employees);
+                    viewEmployee.getAverageSalaryEmployee(averageSalary);
                     break;
                 case 0:
                     return;

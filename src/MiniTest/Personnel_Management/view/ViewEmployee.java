@@ -81,7 +81,7 @@ public class ViewEmployee {
                             + employee.getCode() + " phone: "
                             + employee.getPhoneNumber() + " age: "
                             + employee.getAge()  + " email: "
-                            + employee.getEmail() + " otHours"
+                            + employee.getEmail() + " otHours: "
                             + ((PartTimeEmployee) employee).getOvertimeHours());
                 else System.out.println("name: "
                         + employee.getName() + " code: "
@@ -104,5 +104,9 @@ public class ViewEmployee {
 
     public void getSalaryEmployee(double salaryEmployee) {
         System.out.println("salary of employee : " + salaryEmployee);
+    }
+
+    public void getAverageSalaryEmployee(double averageSalary) {
+        System.out.println("Average Salary all Employee : " + averageSalary);
     }
 }
