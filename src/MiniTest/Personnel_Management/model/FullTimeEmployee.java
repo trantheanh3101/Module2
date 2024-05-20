@@ -1,6 +1,8 @@
 package MiniTest.Personnel_Management.model;
 
-public class FullTimeEmployee extends Employee{
+import MiniTest.Personnel_Management.services.ReviewSalary;
+
+public class FullTimeEmployee extends Employee implements ReviewSalary {
     private double basicSalary;
     private double bonusSalary;
     private double penaltySalary;
@@ -53,5 +55,10 @@ public class FullTimeEmployee extends Employee{
                 ", bonusSalary=" + bonusSalary +
                 ", penaltySalary=" + penaltySalary +
                 '}';
+    }
+
+    @Override
+    public double getSalaryEmployee(Employee employee) {
+        return getBasicSalary() + (bonusSalary - penaltySalary);
     }
 }

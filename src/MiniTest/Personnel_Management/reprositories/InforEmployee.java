@@ -9,7 +9,7 @@ public class InforEmployee {
     static int count = 0;
 
     static {
-        employees[0] = new FullTimeEmployee("theanh","FT1",20,"0857157116","trantheanhk11@gmail.com",100000000,100000,50000);
+        employees[0] = new FullTimeEmployee("theanh","FT1",20,"0857157116","trantheanhk11@gmail.com",1000,100,50);
         employees[1] = new PartTimeEmployee("theanh1","PT1",25,"08571544545","theanhk11@gmail.com",50);
         count = 2;
     }

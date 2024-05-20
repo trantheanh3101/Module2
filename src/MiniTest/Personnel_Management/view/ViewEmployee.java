@@ -102,8 +102,7 @@ public class ViewEmployee {
         return code;
     }
 
-
-    public void displaySalaryEmployee(double salaryEmployee) {
-        System.out.println("salary of employeee salary = " + salaryEmployee);
+    public void getSalaryEmployee(double salaryEmployee) {
+        System.out.println("salary of employee : " + salaryEmployee);
     }
 }

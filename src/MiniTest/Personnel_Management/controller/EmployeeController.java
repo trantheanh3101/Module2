@@ -39,9 +39,7 @@ public class EmployeeController {
                     break;
                 case 4:
                     code = viewEmployee.getCodeEmployee();
-                    employees = employeeServices.getAllEmployees();
-                    salaryEmploye = employeeServices.getEmployee(code,employees);
-                    viewEmployee.displaySalaryEmployee(salaryEmploye);
+                    viewEmployee.getSalaryEmployee(employeeServices.getSalaryEmployee(code));
                     break;
                 case 5:
                     break;

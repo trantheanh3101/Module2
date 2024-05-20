@@ -1,6 +1,8 @@
 package MiniTest.Personnel_Management.model;
 
-public class PartTimeEmployee extends Employee {
+import MiniTest.Personnel_Management.services.ReviewSalary;
+
+public class PartTimeEmployee extends Employee implements ReviewSalary {
     private double overtimeHours;
 
     public PartTimeEmployee() {
@@ -29,5 +31,10 @@ public class PartTimeEmployee extends Employee {
                 super.toString() +
                 "overtimeHours=" + overtimeHours +
                 '}';
+    }
+
+    @Override
+    public double getSalaryEmployee(Employee employee) {
+        return getOvertimeHours() * 100;
     }
 }

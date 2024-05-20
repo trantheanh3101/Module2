@@ -4,19 +4,9 @@ import MiniTest.Personnel_Management.model.Employee;
 import MiniTest.Personnel_Management.model.FullTimeEmployee;
 import MiniTest.Personnel_Management.model.PartTimeEmployee;
 import MiniTest.Personnel_Management.reprositories.InforEmployee;
-import mvc.models.Student;
 
-public class EmployeeServices implements ReviewSalary {
+public class EmployeeServices {
     private InforEmployee inforEmployee = new InforEmployee();
-
-    @Override
-    public double getSalaryEmployee(Employee employee) {
-        double result = 0;
-        if (employee instanceof FullTimeEmployee){
-           return result = ((FullTimeEmployee) employee).getBasicSalary() + (((FullTimeEmployee) employee).getBonusSalary() - ((FullTimeEmployee) employee).getPenaltySalary());
-        } else
-           return result = ((PartTimeEmployee) employee).getOvertimeHours() * 100000;
-    }
 
     public boolean add(Employee employee) {
         if(employee.getName().equals("")) {
@@ -31,15 +21,17 @@ public class EmployeeServices implements ReviewSalary {
         return inforEmployee.getEmployees();
     }
 
-    public double getEmployee(String code,Employee[] employees) {
+    public double getSalaryEmployee(String code) {
         double result = 0;
-        for (Employee employee : employees){
-            if (employee.getCode().equals(code)){
-                if (employee instanceof FullTimeEmployee){
-                    result = ((FullTimeEmployee) employee).getBasicSalary() + (((FullTimeEmployee) employee).getBonusSalary() - ((FullTimeEmployee) employee).getPenaltySalary());
-                } else
-                    result = ((PartTimeEmployee) employee).getOvertimeHours() * 100000;
-            }
+        String codeEmployee ;
+        Employee employee;
+        for (int i = 0; i < inforEmployee.getCountStu(); i++) {
+            employee = inforEmployee.getEmployees()[i];
+            if (employee.getCode().equals(code))
+                if (employee instanceof PartTimeEmployee)
+                    result = ((PartTimeEmployee) employee).getSalaryEmployee(employee);
+                else
+                    result = ((FullTimeEmployee) employee).getSalaryEmployee(employee);
         }
         return result;
     }
