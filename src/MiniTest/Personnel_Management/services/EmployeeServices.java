@@ -10,7 +10,7 @@ public class EmployeeServices implements ReviewSalary {
     private InforEmployee inforEmployee = new InforEmployee();
 
     @Override
-    public double calSalaryEmployee(Employee employee) {
+    public double getSalaryEmployee(Employee employee) {
         double result = 0;
         if (employee instanceof FullTimeEmployee){
            return result = ((FullTimeEmployee) employee).getBasicSalary() + (((FullTimeEmployee) employee).getBonusSalary() - ((FullTimeEmployee) employee).getPenaltySalary());
@@ -29,5 +29,18 @@ public class EmployeeServices implements ReviewSalary {
 
     public Employee[] getAllEmployees() {
         return inforEmployee.getEmployees();
+    }
+
+    public double getEmployee(String code,Employee[] employees) {
+        double result = 0;
+        for (Employee employee : employees){
+            if (employee.getCode().equals(code)){
+                if (employee instanceof FullTimeEmployee){
+                    result = ((FullTimeEmployee) employee).getBasicSalary() + (((FullTimeEmployee) employee).getBonusSalary() - ((FullTimeEmployee) employee).getPenaltySalary());
+                } else
+                    result = ((PartTimeEmployee) employee).getOvertimeHours() * 100000;
+            }
+        }
+        return result;
     }
 }

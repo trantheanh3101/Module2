@@ -96,8 +96,14 @@ public class ViewEmployee {
         }
     }
 
+    public String getCodeEmployee() {
+        System.out.println("code employee: ");
+        String code = scanner.nextLine();
+        return code;
+    }
 
-    public void viewSalyryEmployee(String code) {
-        System.out.println("Salary of employee have code " + code + " = ");
+
+    public void displaySalaryEmployee(double salaryEmployee) {
+        System.out.println("salary of employeee salary = " + salaryEmployee);
     }
 }
