@@ -1,6 +1,7 @@
 package mvc.controllers;
 
 import mvc.models.Student;
+import mvc.repositories.StudentRepository;
 import mvc.services.IStudentService;
 import mvc.views.StudentView;
 
@@ -30,6 +31,15 @@ public class StudentController {
                     break;
                 }
                 case 2: {
+                    int idEdit = studentView.getEditStudentId();
+                    Student studentToEdit = studentService.getStudentByIndex(idEdit);
+                    if (studentToEdit != null) {
+                        Student updatedStudent = studentView.viewEdit(studentToEdit);
+                        boolean editResult = studentService.updateStudent(updatedStudent);
+                        studentView.viewMessageEdit(editResult);
+                    } else {
+                        studentView.viewMessageEdit(false);
+                    }
                     break;
                 }
                 case 3: {

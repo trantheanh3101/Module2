@@ -57,6 +57,17 @@ public class StudentService implements IStudentService {
         return true;
     }
 
+    public boolean updateStudent(Student updatedStudent) {
+        for (int i = 0; i < studentRepository.getCountStu(); i++) {
+            Student student = studentRepository.getStudents()[i];
+            if (student.getCode() == updatedStudent.getCode()) {
+                student = updatedStudent;
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Student getStudentByIndex(int index) {
         if (index >= 0 && index < studentRepository.getCountStu()) {
             return studentRepository.getStudents()[index];

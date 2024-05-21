@@ -66,4 +66,41 @@ public class StudentView implements Iview {
             System.out.println("Không tìm thấy phần tử cần xóa: ");
         }
     }
+
+    public int getEditStudentId() {
+        System.out.print("ID of the student you want to edit: ");
+        return Integer.parseInt(scanner.nextLine());
+    }
+
+    public Student viewEdit(Student student) {
+        System.out.println("Editing student with ID: " + student.getCode());
+
+        System.out.print("Input new name (current: " + student.getName() + "): ");
+        String name = scanner.nextLine();
+        if (!name.isEmpty()) {
+            student.setName(name);
+        }
+
+        System.out.print("Input new address (current: " + student.getAddress() + "): ");
+        String address = scanner.nextLine();
+        if (!address.isEmpty()) {
+            student.setAddress(address);
+        }
+
+        System.out.print("Input new classroom (current: " + student.getClassroom() + "): ");
+        String classroom = scanner.nextLine();
+        if (!classroom.isEmpty()) {
+            student.setClassroom(classroom);
+        }
+
+        return student;
+    }
+
+    public void viewMessageEdit(boolean result) {
+        if (result) {
+            System.out.println("Chỉnh sửa thành công");
+        } else {
+            System.out.println("Chỉnh sửa thất bại");
+        }
+    }
 }

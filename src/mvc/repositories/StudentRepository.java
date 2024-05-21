@@ -23,6 +23,7 @@ public class StudentRepository {
     public int getCapacity() {
         return students.length;
     }
+
     // Cung cấp truy cập mang tuong tu mang using , van bao toan private
     public Student[] getStudents() {
         Student[] studentNew = new Student[students.length];
@@ -34,7 +35,7 @@ public class StudentRepository {
 
     public void deleteStudent(int studentId) {
         for (int i = 0; i < count; i++) {
-            if (students[i].getCode() == studentId){
+            if (students[i].getCode() == studentId) {
                 for (int j = i; j < count - 1; j++) {
                     students[j] = students[j + 1];
                 }
@@ -43,4 +44,5 @@ public class StudentRepository {
             }
         }
     }
+
 }
