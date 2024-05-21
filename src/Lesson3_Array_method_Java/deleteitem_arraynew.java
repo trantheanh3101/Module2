@@ -1,5 +1,6 @@
 package Lesson3_Array_method_Java;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -25,7 +26,6 @@ public class deleteitem_arraynew {
         arrNew[2] = 50;
         System.out.println(Arrays.toString(arrNew));
         System.out.println(Arrays.toString(array));
-
     }
 
     public static int[] delete(int num,int[] arr){
