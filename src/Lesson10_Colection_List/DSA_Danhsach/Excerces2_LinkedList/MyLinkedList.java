@@ -1,5 +1,7 @@
 package Lesson10_Colection_List.DSA_Danhsach.Excerces2_LinkedList;
 
+import java.util.ArrayList;
+
 // Định nghĩa một lớp chung (generic) MyLinkedList với tham số kiểu E
 public class MyLinkedList<E> {
 
