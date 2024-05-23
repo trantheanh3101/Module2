@@ -1,8 +1,8 @@
-package mvc.services.impl;
+package MVC_Exercise.mvcStudentManager.services.impl;
 
-import mvc.models.Student;
-import mvc.repositories.StudentRepository;
-import mvc.services.IStudentService;
+import MVC_Exercise.mvcStudentManager.models.Student;
+import MVC_Exercise.mvcStudentManager.repositories.StudentRepository;
+import MVC_Exercise.mvcStudentManager.services.IStudentService;
 
 
 public class StudentService implements IStudentService {

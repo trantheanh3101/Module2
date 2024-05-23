@@ -1,9 +1,8 @@
-package mvc.controllers;
+package MVC_Exercise.mvcStudentManager.controllers;
 
-import mvc.models.Student;
-import mvc.repositories.StudentRepository;
-import mvc.services.IStudentService;
-import mvc.views.StudentView;
+import MVC_Exercise.mvcStudentManager.models.Student;
+import MVC_Exercise.mvcStudentManager.services.IStudentService;
+import MVC_Exercise.mvcStudentManager.views.StudentView;
 
 public class StudentController {
     private StudentView studentView;

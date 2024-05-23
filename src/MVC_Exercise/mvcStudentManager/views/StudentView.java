@@ -1,7 +1,7 @@
-package mvc.views;
+package MVC_Exercise.mvcStudentManager.views;
 
-import mvc.models.Student;
-import mvc.repositories.StudentRepository;
+import MVC_Exercise.mvcStudentManager.models.Student;
+import MVC_Exercise.mvcStudentManager.repositories.StudentRepository;
 
 import java.util.Scanner;
 

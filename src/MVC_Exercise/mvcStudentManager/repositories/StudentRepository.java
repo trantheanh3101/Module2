@@ -1,6 +1,6 @@
-package mvc.repositories;
+package MVC_Exercise.mvcStudentManager.repositories;
 
-import mvc.models.Student;
+import MVC_Exercise.mvcStudentManager.models.Student;
 
 public class StudentRepository {
     private static Student[] students = new Student[100];

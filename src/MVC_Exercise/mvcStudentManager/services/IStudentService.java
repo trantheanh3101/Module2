@@ -1,6 +1,6 @@
-package mvc.services;
+package MVC_Exercise.mvcStudentManager.services;
 
-import mvc.models.Student;
+import MVC_Exercise.mvcStudentManager.models.Student;
 
 public interface IStudentService{
     boolean add(Student student);

@@ -1,9 +1,9 @@
-package mvc.controllers;
+package MVC_Exercise.mvcStudentManager.controllers;
 
-import mvc.services.IStudentService;
-import mvc.services.impl.StudentService;
-import mvc.views.StudentView;
-import mvc.views.UserView;
+import MVC_Exercise.mvcStudentManager.services.IStudentService;
+import MVC_Exercise.mvcStudentManager.services.impl.StudentService;
+import MVC_Exercise.mvcStudentManager.views.StudentView;
+import MVC_Exercise.mvcStudentManager.views.UserView;
 
 
 public class Main {

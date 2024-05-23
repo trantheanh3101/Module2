@@ -1,4 +1,4 @@
-package mvc.models;
+package MVC_Exercise.mvcStudentManager.models;
 
 public abstract class Person {
     private int code;

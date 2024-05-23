@@ -1,4 +1,4 @@
-package mvc.views;
+package MVC_Exercise.mvcStudentManager.views;
 
 import java.util.Scanner;
 

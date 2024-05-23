@@ -1,4 +1,4 @@
-package mvc.models;
+package MVC_Exercise.mvcStudentManager.models;
 
 public class Student extends Person{
     private String classroom;
