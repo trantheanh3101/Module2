@@ -3,9 +3,10 @@ package MVC_Exercise.ProductManager.repository;
 import MVC_Exercise.ProductManager.model.Product;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
-public class ProductManager {
+public class ProductManager{
     private ArrayList<Product> productList;
 
     public ProductManager() {
@@ -45,7 +46,7 @@ public class ProductManager {
     }
 
     public ArrayList<Product> searchProductByName(String name) {
-        ArrayList<Product> result = new ArrayList<>();
+        ArrayList<Product> result = new ArrayList<>();  // boi vi name co the giong nhau nhieu nen tao mang
         for (Product product : productList) {
             if (product.getName().equalsIgnoreCase(name)) {
                 result.add(product);
@@ -54,11 +55,35 @@ public class ProductManager {
         return result;
     }
 
-    public void sortProductsByPriceAscending() {
-        productList.sort(Comparator.comparingDouble(Product::getPrice));
+    public void sortProductsByPriceIncrease() {
+//        productList.sort(Comparator.comparingDouble(Product::getPrice));
+
+//        int n = productList.size();
+//        for (int i = 0; i < n - 1; i++) {
+//            for (int j = 0; j < n - i - 1; j++) {
+//                if (productList.get(j).getPrice() > productList.get(j + 1).getPrice()) {
+//                    Product temp = productList.get(j);
+//                    productList.set(j, productList.get(j + 1));
+//                    productList.set(j + 1, temp);
+//                }
+//            }
+//        }
+        Collections.sort(productList);
     }
 
-    public void sortProductsByPriceDescending() {
-        productList.sort(Comparator.comparingDouble(Product::getPrice).reversed());
+    public void sortProductsByPriceDecrease() {
+//        productList.sort(Comparator.comparingDouble(Product::getPrice).reversed());
+
+//        int n = productList.size();
+//        for (int i = 0; i < n - 1; i++) {
+//            for (int j = 0; j < n - i - 1; j++) {
+//                if (productList.get(j).getPrice() < productList.get(j + 1).getPrice()) {
+//                    Product temp = productList.get(j);
+//                    productList.set(j, productList.get(j + 1));
+//                    productList.set(j + 1, temp);
+//                }
+//            }
+//        }
+        Collections.reverse(productList);
     }
 }

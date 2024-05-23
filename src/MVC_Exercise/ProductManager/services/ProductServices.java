@@ -24,8 +24,8 @@ public class ProductServices {
         int id = view.getProductId();
         Product product = productManager.findProductById(id);
         if (product != null) {
-            Product newDetails = view.getProductDetails();
-            productManager.updateProduct(id, newDetails);
+            Product newEditDetails = view.getProductDetails();
+            productManager.updateProduct(id, newEditDetails);
             view.displayMessageOK();
         } else {
             view.displayMessageNOK();
@@ -50,12 +50,12 @@ public class ProductServices {
     }
 
     public void sortProductsByPriceAscending(ProductView view) {
-        productManager.sortProductsByPriceAscending();
+        productManager.sortProductsByPriceIncrease();
         view.displayMessageSort();
     }
 
     public void sortProductsByPriceDescending(ProductView view) {
-        productManager.sortProductsByPriceDescending();
+        productManager.sortProductsByPriceDecrease();
         view.displayMessageSort();
     }
 }

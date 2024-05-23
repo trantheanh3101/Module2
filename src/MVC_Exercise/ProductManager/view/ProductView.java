@@ -15,8 +15,8 @@ public class ProductView {
         System.out.println("3. Delete Product");
         System.out.println("4. Display Products");
         System.out.println("5. Search Product by Name");
-        System.out.println("6. Sort Products by Price Ascending");
-        System.out.println("7. Sort Products by Price Descending");
+        System.out.println("6. Sort Products by Price increase");
+        System.out.println("7. Sort Products by Price decrease");
         System.out.println("0. Exit");
         System.out.print("Enter your choice: ");
         return scanner.nextInt();
@@ -34,12 +34,12 @@ public class ProductView {
     }
 
     public int getProductId() {
-        System.out.print("Enter Id of product want to edit id: ");
+        System.out.print("Enter Id of product want : ");
         return scanner.nextInt();
     }
 
     public String getProductName() {
-        System.out.print("Enter product name: ");
+        System.out.print("Enter product name want : ");
         scanner.nextLine();
         return scanner.nextLine();
     }

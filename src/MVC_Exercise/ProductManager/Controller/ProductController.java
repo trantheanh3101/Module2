@@ -1,11 +1,13 @@
 package MVC_Exercise.ProductManager.Controller;
 
+import MVC_Exercise.ProductManager.repository.ProductManager;
 import MVC_Exercise.ProductManager.services.ProductServices;
 import MVC_Exercise.ProductManager.view.ProductView;
 
 public class ProductController {
     private ProductServices productServices;
     private ProductView view;
+    private ProductManager productManager;
 
     public ProductController(ProductView view) {
         this.productServices = new ProductServices();

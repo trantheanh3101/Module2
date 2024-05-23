@@ -1,6 +1,6 @@
 package MVC_Exercise.ProductManager.model;
 
-public class Product {
+public class Product implements Comparable<Product>{
     private int id;
     private String name;
     private double price;
@@ -39,5 +39,10 @@ public class Product {
     @Override
     public String toString() {
         return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return Double.compare(this.price,o.price);
     }
 }
