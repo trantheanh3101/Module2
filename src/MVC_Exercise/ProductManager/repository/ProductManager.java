@@ -84,6 +84,7 @@ public class ProductManager{
 //                }
 //            }
 //        }
+        Collections.sort(productList);
         Collections.reverse(productList);
     }
 }
