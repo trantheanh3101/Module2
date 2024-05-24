@@ -4,7 +4,6 @@ import MVC_Exercise.ProductManager.model.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class ProductManager{
     private ArrayList<Product> productList;
@@ -68,6 +67,7 @@ public class ProductManager{
 //                }
 //            }
 //        }
+
         Collections.sort(productList);
     }
 
