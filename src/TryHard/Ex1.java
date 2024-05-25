@@ -19,20 +19,14 @@ public class Ex1 {
             array[i] = sc.nextInt();
         }
 
-//        Arrays.sort(array);
-        Comparator<Integer> reverseComparator = new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2.compareTo(o1); // So sánh ngược lại
-            }
-        };
-
-//        Arrays.sort(array,reverseComparator);
-
         System.out.println("array Increace: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(array[i] + " ");
-        }
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(array[i] + " ");
+//        }
+//        for (int i : array) {
+//            System.out.println(array[i] + " ");
+//        }
+        Arrays.stream(array).forEach(System.out::print);
 
 
 
@@ -45,6 +39,12 @@ public class Ex1 {
             if (entry.getValue() == 1 )
                 System.out.print(entry.getKey() + " ");
         }
+
+        hashMap.entrySet().forEach(integerIntegerEntry -> {
+            if (integerIntegerEntry.getValue() == 1) {
+                System.out.print(integerIntegerEntry.getKey() + " ");
+            }
+        });
     }
 
     public static HashMap<Integer,Integer> demItem(int[] array){
