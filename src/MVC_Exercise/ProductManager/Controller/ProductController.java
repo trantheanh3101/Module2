@@ -7,7 +7,6 @@ import MVC_Exercise.ProductManager.view.ProductView;
 public class ProductController {
     private ProductServices productServices;
     private ProductView view;
-    private ProductManager productManager;
 
     public ProductController(ProductView view) {
         this.productServices = new ProductServices();
