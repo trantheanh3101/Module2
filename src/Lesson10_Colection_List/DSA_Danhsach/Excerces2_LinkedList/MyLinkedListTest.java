@@ -1,7 +1,5 @@
 package Lesson10_Colection_List.DSA_Danhsach.Excerces2_LinkedList;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 // Định nghĩa lớp MyLinkedListTest để kiểm tra hoạt động của MyLinkedList
 public class MyLinkedListTest {
 
