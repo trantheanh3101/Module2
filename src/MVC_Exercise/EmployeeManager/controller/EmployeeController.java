@@ -29,8 +29,6 @@ public class EmployeeController {
                         case 3:
                             employeeServeces.addStaff(employeeView);
                             break;
-                        case 4:
-                            break;
                         default:
                             employeeView.getMessenger();
                             break;
