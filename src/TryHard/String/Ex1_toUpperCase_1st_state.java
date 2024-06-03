@@ -18,6 +18,5 @@ public class Ex1_toUpperCase_1st_state {
         message = String.join(" ",strings);
         System.out.println(message);
 
-
     }
 }
