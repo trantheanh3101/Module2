@@ -3,11 +3,9 @@ package MVC_Exercise.MaterialManager.repositories;
 import MVC_Exercise.MaterialManager.model.CrispyFlour;
 import MVC_Exercise.MaterialManager.model.Material;
 import MVC_Exercise.MaterialManager.model.Meat;
-import MVC_Exercise.MaterialManager.serveces.Discount;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class MaterialManager {
     private ArrayList<Material> materials ;
