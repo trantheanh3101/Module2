@@ -51,6 +51,17 @@ public class ProductManager {
         return isRemoved;
     }
 
+    public static void updateProduct(Product updatedProduct) {
+        List<Product> products = getAllProducts();
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getId().equals(updatedProduct.getId())) {
+                products.set(i, updatedProduct);
+                break;
+            }
+        }
+        saveAllProducts(products);
+    }
+
     private static void saveAllProducts(List<Product> products) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH))) {
             for (Product product : products) {

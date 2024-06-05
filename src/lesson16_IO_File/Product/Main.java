@@ -11,7 +11,8 @@ public class Main {
                 System.out.println("2. Hiển thị tất cả sản phẩm");
                 System.out.println("3. Tìm kiếm sản phẩm theo mã");
                 System.out.println("4. Xóa sản phẩm theo mã");
-                System.out.println("5. Thoát");
+                System.out.println("5. Chỉnh sửa sản phẩm theo mã");
+                System.out.println("6. Thoát");
                 System.out.print("Chọn một tùy chọn: ");
                 int choice = scanner.nextInt();
                 scanner.nextLine(); // Consume newline
@@ -30,6 +31,9 @@ public class Main {
                         deleteProductById(scanner);
                         break;
                     case 5:
+                        editProductById(scanner);
+                        break;
+                    case 6:
                         System.out.println("Tạm biệt!");
                         return;
                     default:
@@ -88,5 +92,43 @@ public class Main {
         } else {
             System.out.println("Không tìm thấy sản phẩm với mã " + id);
         }
+    }
+
+    private static void editProductById(Scanner scanner) {
+        System.out.print("Nhập mã sản phẩm cần chỉnh sửa: ");
+        String id = scanner.nextLine();
+        Product existingProduct = ProductManager.findProductById(id);
+        if (existingProduct == null) {
+            System.out.println("Không tìm thấy sản phẩm với mã " + id);
+            return;
+        }
+
+        System.out.print("Nhập tên sản phẩm mới (hoặc nhấn Enter để giữ nguyên): ");
+        String name = scanner.nextLine();
+        if (!name.isEmpty()) {
+            existingProduct.setName(name);
+        }
+
+        System.out.print("Nhập giá sản phẩm mới (hoặc nhấn Enter để giữ nguyên): ");
+        String priceInput = scanner.nextLine();
+        if (!priceInput.isEmpty()) {
+            double price = Double.parseDouble(priceInput);
+            existingProduct.setPrice(price);
+        }
+
+        System.out.print("Nhập hãng sản xuất mới (hoặc nhấn Enter để giữ nguyên): ");
+        String manufacturer = scanner.nextLine();
+        if (!manufacturer.isEmpty()) {
+            existingProduct.setManufacturer(manufacturer);
+        }
+
+        System.out.print("Nhập mô tả sản phẩm mới (hoặc nhấn Enter để giữ nguyên): ");
+        String description = scanner.nextLine();
+        if (!description.isEmpty()) {
+            existingProduct.setDescription(description);
+        }
+
+        ProductManager.updateProduct(existingProduct);
+        System.out.println("Sản phẩm đã được chỉnh sửa thành công.");
     }
 }

@@ -1,8 +1,7 @@
-package MVC_Exercise.ProductManager.Controller;
+package TryHard.ProductManager.Controller;
 
-import MVC_Exercise.ProductManager.repository.ProductManager;
-import MVC_Exercise.ProductManager.services.ProductServices;
-import MVC_Exercise.ProductManager.view.ProductView;
+import TryHard.ProductManager.services.ProductServices;
+import TryHard.ProductManager.view.ProductView;
 
 public class ProductController {
     private ProductServices productServices;
@@ -34,10 +33,10 @@ public class ProductController {
                     productServices.searchProductByName(view);
                     break;
                 case 6:
-                    productServices.sortProductsByPriceAscending(view);
+//                    productServices.sortProductsByPriceAscending(view);
                     break;
                 case 7:
-                    productServices.sortProductsByPriceDescending(view);
+//                    productServices.sortProductsByPriceDescending(view);
                     break;
                 case 0:
                     run = false;
