@@ -11,7 +11,7 @@ public class LibraryManager {
     ArrayList<Document> documentArrayList;
 
     public LibraryManager() {
-        this.documentArrayList = new ArrayList<>();
+        documentArrayList = new ArrayList<>();
         documentOrigin();
     }
 
