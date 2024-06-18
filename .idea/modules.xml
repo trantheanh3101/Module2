@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../HackerRank/HackerRank.iml" filepath="$PROJECT_DIR$/../HackerRank/HackerRank.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../HackerRank/HackerRank1.iml" filepath="$PROJECT_DIR$/../HackerRank/HackerRank1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../LibraryJava/LibraryJava.iml" filepath="$PROJECT_DIR$/../LibraryJava/LibraryJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module2.iml" filepath="$PROJECT_DIR$/Module2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Module3/Module3.iml" filepath="$PROJECT_DIR$/../Module3/Module3.iml" />
     </modules>
