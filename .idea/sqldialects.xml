@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/../Module3/BaiTapBonus/Case_ResordManager/ResordManager.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/BaiTapBonus/Case_ResordManager/ResordManager_Answers.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/../Module3/BaiTapBonus/demo/demo_answers.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/../Module3/Lesson1_5/StudentManager1.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/BaiTapBonus/demo/demo_case_table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/Lesson1_5/SaleManager/SaleManager.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/Lesson1_5/SaleManager/SaleManager_Answers.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/Lesson1_5/StudentManager/StudentManager1.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/Lesson1_5/StudentManager/StudentManager_Answers.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/../Module3/TEXTCODE/Baimau/TTA_Testing_System_Assignment_5.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/../Module3/TEXTCODE/Baimau/TTA_Testing_System_Assignment_5_answers.sql" dialect="MySQL" />
   </component>
 </project>
